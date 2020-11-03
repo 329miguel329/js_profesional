@@ -12,14 +12,11 @@ class MediaPlayer {
       pause: () => this.pause(),
       media: this.media,
       get muted() {
-        return this.media.muted;
-      },
-      set muted(value) {
-        this.media.muted = value;
+        return this.media.mute;
       },
     };
 
-    this.plugins.forEach(plugin => plugin.run(player));
+    this.plugins.forEach(plugin => plugin.run(this));
   }
 
   play = () => this.media.play();
@@ -30,13 +27,9 @@ class MediaPlayer {
     (this.media.paused) ? this.play() : this.pause() ;
   }
 
-  toggleMute = () => {
-    (this.media.muted) ? this.unmute() : this.mute() ;
-  }
+  mute = () => this.media.mute = true;
 
-  mute = () => this.media.muted = true;
-
-  unmute = () => this.media.muted = false;
+  unmute = () => this.media.mute = false;
 }
 
 export default MediaPlayer;

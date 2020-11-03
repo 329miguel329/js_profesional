@@ -13,4 +13,3 @@ const player = new MediaPlayer({
 });
 
 bPlay.onclick = () => player.togglePlay();
-bMute.onclick = () => player.toggleMute();
