@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/329miguel329/js_profesional#readme",
   "devDependencies": {
-    "live-server": "^1.2.1",
-    "parcel-bundler": "^1.12.4"
-  }
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.5"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
